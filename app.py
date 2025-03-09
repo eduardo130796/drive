@@ -254,6 +254,8 @@ if ACCESS_TOKEN:
 else:
     st.error("Erro ao renovar o token. Insira um novo refresh token para continuar.")
     REFRESH_TOKEN = st.text_input("🔑 Insira um novo Refresh Token", type="password")
+    st.html("</br></br></br>")
+    st.caption('Site para renovar o Token: https://developers.google.com/oauthplayground/?code=4/0AQSTgQFMsCfQU0VUF91uoR4NFUfjxGB9QzRZf139YkSUvz6GcDrgdh8kZyg-P5mr1Xkr9Q&scope=https://www.googleapis.com/auth/drive')
     if REFRESH_TOKEN:
         ACCESS_TOKEN = renovar_token(REFRESH_TOKEN)
         if ACCESS_TOKEN:
@@ -304,8 +306,7 @@ if token_valido:
                         data=buffer_final,
                         file_name=nome_arquivo.replace(".xlsx", "_atualizada.xlsx"),
                         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-st.html("</br></br></br>")
-st.caption('Site para renovar o Token: https://developers.google.com/oauthplayground/?code=4/0AQSTgQFMsCfQU0VUF91uoR4NFUfjxGB9QzRZf139YkSUvz6GcDrgdh8kZyg-P5mr1Xkr9Q&scope=https://www.googleapis.com/auth/drive')
+
 # Rodapé fixo com largura total
 rodape = """
     <style>
