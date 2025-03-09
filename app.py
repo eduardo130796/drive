@@ -243,7 +243,7 @@ def processar_planilhas(arquivo_base, arquivo_atualizacao, nome_arquivo_base):
 # Interface Streamlit
 #st.set_page_config(page_title="Processamento de Planilhas", page_icon="📊", layout="centered")
 # Interface
-st.title("📂 Processador de Planilhas no Google Drive")
+st.title("📂 Atualização de Planilhas Orçamentárias")
 st.markdown("Melhore sua produtividade automatizando atualizações de planilhas com apenas um clique! 🚀")
 st.html("</br></br></br>")
 # Gerenciar token
